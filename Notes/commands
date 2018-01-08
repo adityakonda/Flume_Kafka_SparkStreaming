@@ -1,0 +1,61 @@
+1.	List the processes tbat are listing to a port
+
+		$	lsof -i:<port_number>
+
+2.  Starting NetCat webservices
+
+		$	nc -lk sandbox.hortonworks.com 9999 (producer)
+
+		$	telnet sandbox.hortonworks.com 9999 (consumer)
+
+3.  Integrating gen_logs with a web-service - It will create a web service using net cat
+
+        $   tail_logs.sh | nc -lk sandbox.hortonworks.com 9876
+
+        $   telnet sandbox.hortonworks.com 9876
+
+4.  Launching Streaming-Word-Count application
+
+    --Launching producer to write text
+
+        $   nc -lk sandbox.hortonworks.com 9999
+
+    --Launching Spark Application
+
+        spark-submit \
+        --class com.streamingapplication.WordCount \
+        --master yarn \
+        --executor-memory 600M \
+        --driver-memory 600M \
+        /root/aditya/spark_applications_2.10-1.0.jar
+
+5.  Launching Department-traffic application
+
+    --Integrating gen_logs with a web-service
+
+        $   tail_logs.sh | nc -lk sandbox.hortonworks.com 9876
+
+    --Launching Spark Application
+
+        spark-submit \
+        --class com.streamingapplication.DepartmentTraffic \
+        --master yarn \
+        --executor-memory 600M \
+        --driver-memory 600M \
+        /root/aditya/spark_applications_2.10-1.0.jar
+
+6.  Launching Flume-Spark-Streaming
+
+    --Launcing flume agent itversity.conf
+
+        $   flume-ng agent --name sdc --conf-file /root/aditya/flume_demo/itversity.conf
+
+    --Launching Spark Application
+
+spark-submit \
+--class com.streamingapplication.FlumeSparkStreaming \
+--master yarn \
+--executor-memory 600M \
+--driver-memory 600M \
+--jars "/usr/hdp/2.6.3.0-235/flume/lib/commons-lang3-3.5.jar,/usr/hdp/2.6.3.0-235/spark/lib/spark-streaming-flume_2.11-2.2.0.jar,/usr/hdp/2.6.3.0-235/spark/lib/spark-streaming-flume-sink_2.11-2.2.0.jar,/usr/hdp/2.6.3.0-235/flume/lib/flume-ng-sdk-1.5.2.2.6.3.0-235.jar" \
+/root/aditya/spark_applications_2.10-1.0.jar
