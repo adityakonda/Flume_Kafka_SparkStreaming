@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5ebc001-d33b-42bf-ab46-b16be8b25620" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FlumeConfigurationFiles/example.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FlumeConfigurationFiles/webLogsToHDFS.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Notes/commands" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/sparkstreaming/applications/DepartmentTraffic.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/sparkstreaming/applications/FlumeSparkStreaming.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/sparkstreaming/applications/WordCount.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/flume_kafka_sparkstreaming.iml" afterPath="$PROJECT_DIR$/.idea/modules/flume_kafka_sparkstreaming.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FlumeConfigurationFiles/itversity.conf" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlumeSparkStreaming.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FlumeSparkStreaming.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/sparkstreaming/applications/FlumeSparkStreaming.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
@@ -49,6 +41,16 @@
               <folding>
                 <element signature="e#41#74#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="itversity.conf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FlumeConfigurationFiles/itversity.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="968">
+              <caret line="44" column="77" lean-forward="false" selection-start-line="44" selection-start-column="77" selection-end-line="44" selection-end-column="77" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,6 +132,7 @@
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/com/sparkstreaming/applications/FlumeSparkStreaming.scala" />
         <option value="$PROJECT_DIR$/Notes/commands" />
+        <option value="$PROJECT_DIR$/FlumeConfigurationFiles/itversity.conf" />
       </list>
     </option>
   </component>
@@ -873,6 +876,14 @@
           <folding>
             <element signature="e#41#74#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FlumeConfigurationFiles/itversity.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="44" column="77" lean-forward="false" selection-start-line="44" selection-start-column="77" selection-end-line="44" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
